@@ -2815,9 +2815,9 @@ footer {
   top: 0;
   left: 0;
   z-index: 10;
-  -webkit-transform: translateY(-200vh);
-      -ms-transform: translateY(-200vh);
-          transform: translateY(-200vh);
+  -webkit-transform: translateY(-300%);
+      -ms-transform: translateY(-300%);
+          transform: translateY(-300%);
   -webkit-transition: -webkit-transform 500ms ease-in 0ms;
   transition: -webkit-transform 500ms ease-in 0ms;
   -o-transition: transform 500ms ease-in 0ms;
