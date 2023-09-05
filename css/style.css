@@ -2564,7 +2564,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #F9F8F6;
-  padding: 16px 16px 32px 16px;
+  padding: 16px 16px 42px 16px;
   border-radius: 10px 10px 0 0;
   max-width: none;
   width: 100%;
@@ -2810,9 +2810,9 @@ footer {
   top: 0;
   left: 0;
   z-index: 10;
-  -webkit-transform: translateY(-200%);
-      -ms-transform: translateY(-200%);
-          transform: translateY(-200%);
+  -webkit-transform: translateY(-200vh);
+      -ms-transform: translateY(-200vh);
+          transform: translateY(-200vh);
   -webkit-transition: -webkit-transform 500ms ease-in 0ms;
   transition: -webkit-transform 500ms ease-in 0ms;
   -o-transition: transform 500ms ease-in 0ms;
