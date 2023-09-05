@@ -2584,7 +2584,7 @@ footer {
 }
 
 .modal-window__content-success {
-  margin-bottom: 100px;
+  padding-bottom: 80px;
 }
 
 .modal-window__content-success .modal-window__title-wrapper {
@@ -3315,6 +3315,10 @@ footer {
     margin-bottom: 0;
   }
 
+  .modal-window__content-success {
+    padding-bottom: 32px;
+  }
+
   .modal-window__title {
     font-size: 32px;
   }
@@ -3623,10 +3627,6 @@ footer {
 
   .modal-window__content {
     max-width: 680px;
-  }
-
-  .modal-window__content-success {
-    margin-bottom: 0;
   }
 
   .p-md-0 {
