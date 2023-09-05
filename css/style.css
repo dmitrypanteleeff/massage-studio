@@ -2564,8 +2564,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #F9F8F6;
-  padding: 16px 16px 40px 16px;
-  margin-bottom: 40px;
+  padding: 16px 16px 80px 16px;
   border-radius: 10px 10px 0 0;
   max-width: none;
   width: 100%;
@@ -2584,7 +2583,7 @@ footer {
 }
 
 .modal-window__content-success {
-  padding-bottom: 80px;
+  padding-bottom: 120px;
 }
 
 .modal-window__content-success .modal-window__title-wrapper {
