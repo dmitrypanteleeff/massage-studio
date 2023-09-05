@@ -2564,7 +2564,8 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #F9F8F6;
-  padding: 16px 16px 60px 16px;
+  padding: 16px 16px 40px 16px;
+  margin-bottom: 40px;
   border-radius: 10px 10px 0 0;
   max-width: none;
   width: 100%;
@@ -2580,6 +2581,10 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.modal-window__content-success {
+  margin-bottom: 80px;
 }
 
 .modal-window__content-success .modal-window__title-wrapper {
@@ -3307,6 +3312,7 @@ footer {
     padding: 32px;
     max-width: 500px;
     border-radius: 32px;
+    margin-bottom: 0;
   }
 
   .modal-window__title {
@@ -3617,6 +3623,10 @@ footer {
 
   .modal-window__content {
     max-width: 680px;
+  }
+
+  .modal-window__content-success {
+    margin-bottom: 0;
   }
 
   .p-md-0 {
