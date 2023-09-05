@@ -16,6 +16,7 @@
 *.launch
 .settings/
 *.sublime-workspace
+*.firebaserc
 
 # IDE - VSCode
 .vscode/*
@@ -30,6 +31,7 @@
 /coverage
 /libpeerconnection.log
 npm-debug.log
+firebase.json
 yarn-error.log
 testem.log
 /typings

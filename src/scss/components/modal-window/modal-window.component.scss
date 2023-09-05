@@ -12,7 +12,7 @@
     width: 100%;
     height: 100vh;
     background-color: transparent;
-    transform: translateY(120vh);
+    transform: translateY(220vh);
     transition: transform 500ms ease-out 500ms,
     background-color 500ms ease-out 0ms;
 
@@ -38,7 +38,7 @@
         justify-content: center;
 
         background-color: $bg03;
-        padding: 16px 16px 32px 16px;
+        padding: 16px 16px 80px 16px;
         border-radius: 10px 10px 0 0;
         max-width: none;
         width: 100%;
@@ -48,6 +48,7 @@
             padding: 32px;
             max-width: 500px;
             border-radius: 32px;
+            margin-bottom: 0;
         }
 
         @media screen and (min-width: 768px) {
@@ -63,6 +64,12 @@
         }
 
         &-success {
+            padding-bottom: 120px;
+
+            @media screen and (min-width: 576px) {
+                padding-bottom: 32px;
+            }
+
             .modal-window__title-wrapper {
                 position: relative;
             }

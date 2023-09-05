@@ -8,7 +8,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp",
-    "build": "gulp build --build"
+    "build": "gulp build --build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "DmitryPanteleeff",
   "license": "ISC",
