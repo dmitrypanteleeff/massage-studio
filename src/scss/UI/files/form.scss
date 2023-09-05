@@ -1,0 +1,98 @@
+@import '../../common/files/variables.scss';
+
+.form {
+
+    width: 100%;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 100%;
+    }
+
+    &__input-wrapper {
+        position: relative;
+
+        &-grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1fr;
+
+            @media screen and (min-width: 576px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    &__btn {
+
+        &-count {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            flex-shrink: 0;
+            right: 16px;
+            width: 16px;
+            outline: none;
+            border: none;
+            background-color: $bg01;
+            cursor: pointer;
+            z-index: 2;
+
+            &-plus {
+                top: 17px;
+
+                &:hover,
+                &:focus {
+                    svg path {
+                        fill: $primaryHover;
+                    }
+                }
+
+                &:active {
+                    svg path {
+                        fill: $primaryActive;
+                    }
+                }
+            }
+
+            &-minus {
+                top: 34px;
+
+                &:hover,
+                &:focus {
+                    svg path {
+                        fill: $primaryHover;
+                    }
+                }
+
+                &:active {
+                    svg path {
+                        fill: $primaryActive;
+                    }
+                }
+            }
+        }
+
+        &-action {
+            padding: 16px;
+            width: 100%;
+
+            @media screen and (min-width: 576px) {
+                padding: 18px;
+            }
+
+            &-wrapper {
+                max-width: none;
+                width: 100%;
+            }
+
+        }
+    }
+
+    &__accept {
+        font-weight: 400;
+    }
+}

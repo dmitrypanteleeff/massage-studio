@@ -1,0 +1,46 @@
+@import '../../common/files/variables';
+
+.input {
+
+    &__row {
+        position: relative;
+
+        &.error {
+            .input__value {
+                border: 1px solid $danger;
+            }
+        }
+    }
+
+    &__value {
+        width: 100%;
+        padding: 17px 16px;
+        border: 1px solid transparent;
+        outline: none;
+        border-radius: 40px;
+        font-size: 14px;
+
+        @media screen and (min-width: 576px) {
+            font-size: 16px;
+            padding: 18px 16px;
+        }
+
+        &,
+        &:hover,
+        &:focus {
+            color: $text02;
+            -webkit-text-fill-color: $text02;
+            -webkit-box-shadow: 0 0 0 1000px transparent inset;
+            transition: background-color 5000s ease-in-out 0s;
+            background: $bg01;
+        }
+    }
+    
+    &__item-small {
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        font-size: 14px;
+        color: $danger;
+    }
+}

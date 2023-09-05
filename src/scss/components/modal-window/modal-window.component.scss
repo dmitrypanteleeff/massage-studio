@@ -1,0 +1,160 @@
+@import '../../common/files/variables.scss';
+
+.modal-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    transform: translateY(120vh);
+    transition: transform 500ms ease-out 500ms,
+    background-color 500ms ease-out 0ms;
+
+    @media screen and (min-width: 576px) {
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.active {
+        transform: translateY(0px);
+        background-color: rgba(86, 86, 86, 0.15);
+        backdrop-filter: blur(10px);
+        transition: transform 500ms ease-out 0ms,
+        background-color 500ms ease-out 500ms,
+        backdrop-filter 500ms ease-out 500ms;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: flex-start;
+        justify-content: center;
+
+        background-color: $bg03;
+        padding: 16px 16px 32px 16px;
+        border-radius: 10px 10px 0 0;
+        max-width: none;
+        width: 100%;
+        
+
+        @media screen and (min-width: 576px) {
+            padding: 32px;
+            max-width: 500px;
+            border-radius: 32px;
+        }
+
+        @media screen and (min-width: 768px) {
+            max-width: 680px;
+        }
+
+        &-order, &-success {
+            display: none;
+
+            &.active {
+                display: flex;
+            }
+        }
+
+        &-success {
+            .modal-window__title-wrapper {
+                position: relative;
+            }
+            
+
+            .modal-window__btn-close-wrapper {
+                position: absolute;
+                right: 0;
+            }
+        }
+        
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: 500;
+
+        @media screen and (min-width: 576px) {
+            font-size: 32px;
+        }
+
+        &-wrapper {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        &-success {
+            font-size: 22px;
+
+            @media screen and (min-width: 576px) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 100%;
+    }
+
+    &__input-wrapper {
+        position: relative;
+    }
+
+    &__btn {
+
+        &-close {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 10px;
+            border-radius: 100px;
+            background-color: $bg01;
+            width: 36px;
+            height: 36px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 14px;
+                height: 2px;
+                transform: rotate(45deg);
+                background-color: $text01;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 14px;
+                height: 2px;
+                transform: rotate(-45deg);
+                background-color: $text01;
+            }
+
+            &:hover,
+            &:focus {
+                &::before,
+                &::after {
+                    background-color: $primaryHover;
+                }
+            }
+    
+            &:active {
+                &::before,
+                &::after {
+                    background-color: $primaryActive;
+                }
+            }
+        }
+    }
+}

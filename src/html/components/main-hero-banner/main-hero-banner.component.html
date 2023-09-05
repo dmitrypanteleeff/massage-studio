@@ -1,0 +1,43 @@
+<section class="main-hero-banner page-section">
+    <div class="container">
+        <div class="main-hero-banner__wrapper">
+            <div>
+                <h1 class="h1 main-hero-banner__h1 text-01-color">
+                    <span class="d-block primary-color">
+                        Корпоративный массаж
+                    </span>
+                    <span class="d-block">
+                        с&nbsp;заботой о&nbsp;здоровье ваших сотрудников
+                    </span>    
+                </h1>
+                @@include('../../UI/files/button.html', {
+                    'class-btn': 'btn-01-text btn-primary main-hero-banner__btn modal-window__btn-open',
+                    'text': 'Заказать',
+                    'type-btn': 'button'
+                })
+            </div>
+            <div class="main-hero-banner__circle-discont-wrapper">
+                @@include('../circle-discont/circle-discont.component.html', {
+                    'class-circle': '',
+                    'text-center': '15%',
+                    'text-circle': 'Скидка на первый заказ·Скидка на первый заказ·'
+                })
+            </div>
+           
+
+        </div>
+    </div>
+    <div class="main-hero-banner__poster rounded-4">
+        <img class="main-hero-banner__poster-img lazy" loading="lazy" alt="picture" data-src="@img/main-picture.jpg" />
+        <div class="main-hero-banner__circle-poster-wrapper">
+            @@include('../circle-discont/circle-discont.component.html', {
+                'class-circle': '',
+                'text-center': '15%',
+                'text-circle': 'Скидка на первый заказ·Скидка на первый заказ·'
+            })
+        </div>
+        
+    </div>
+    
+</section>
+

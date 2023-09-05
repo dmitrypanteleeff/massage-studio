@@ -1,0 +1,11 @@
+@import '../../common/files/variables.scss';
+
+.icon {
+    &__wrapper {
+        width: 14px;
+        height: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

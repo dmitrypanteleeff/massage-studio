@@ -1,0 +1,37 @@
+@import '../../common/files/variables.scss';
+
+.link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 54px;
+    cursor: pointer;
+    background-color: $bg02;
+    text-decoration: none;
+    color: $text01;
+
+    &:hover,
+    &:focus {
+        .link-icon__text {
+            color: $primaryHover;
+        }
+        svg path {
+            fill: $primaryHover;
+        }
+    }
+
+    &:active {
+        .link-icon__text {
+            color: $primaryActive;
+        }
+        svg path {
+            fill: $primaryActive;
+        }
+    }
+
+    &__icon-wrapper {
+        margin-right: 6px;
+    }
+}

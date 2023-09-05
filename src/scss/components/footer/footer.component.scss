@@ -1,0 +1,25 @@
+@import '../../common/files/variables.scss';
+
+.footer {
+    flex-shrink: 0;
+    padding: 30px 0;
+    background-color: $bg02;
+
+    &__text {
+        font-size: 12px;
+        font-weight: 300;
+        max-width: 210px;
+        width: 100%;
+
+        @media screen and (min-width: 576px) {
+            max-width: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/components/head/head.component.html', {
+        'title':'Корпоративный массажс заботой о здоровье ваших сотрудников',
+    })
+    <body>
+        @@include('html/components/header/header.component.html', {})
+        <main class="mt-6 mt-lg-0">
+            @@include('html/components/main-hero-banner/main-hero-banner.component.html', {})
+            @@include('html/components/clients/clients.component.html', {})
+            
+            @@include('html/components/about/about-banner.component.html', {})
+        </main>
+        @@include('html/components/footer/footer.component.html', {})
+        @@include('html/components/modal-window/modal-window.component.html')
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

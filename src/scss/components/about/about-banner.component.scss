@@ -1,0 +1,15 @@
+@import '../../common/files/variables.scss';
+
+.about {
+    &__icon {
+        width: 82px;
+
+        @media screen and (min-width: 768px) {
+            width: 128px;
+        }
+
+        & img {
+            width: 100%;
+        }
+    }
+}

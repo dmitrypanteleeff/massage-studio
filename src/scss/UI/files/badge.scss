@@ -1,0 +1,11 @@
+@import '../../common/files/variables.scss';
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 8px;
+    border: 1px solid $text01;
+    border-radius: 61px;
+    font: 500 14px/1 'Gilroy', san-serif;
+}
