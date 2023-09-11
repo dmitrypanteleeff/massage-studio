@@ -10,6 +10,7 @@ export function validateForm() {
         const nameInput = form.querySelector('.input__valid-name');
         const phoneInput = form.querySelector('.input__valid-phone');
         const countInput = form.querySelector('.input__valid-positive-number');
+        console.log(333333333, countInput)
         const timeInput = form.querySelector('.input__valid-time');
         const dateInput = form.querySelector('.input__valid-date');
 
@@ -58,6 +59,26 @@ export function validateForm() {
             return re.test(date.value);
         }
 
+        const checkInputsShort = () => {
+
+            if (nameInput.value === '') {
+                setError(nameInput, 'Обязательное поле.');
+            } else if (!isName(nameInput)) {
+                setError(nameInput, 'Проверьте поле на правильность заполения.');
+            } else {
+                setSucces(nameInput, '');
+            }
+    
+            if (phoneInput.value === '') {
+                setError(phoneInput, 'Обязательное поле.');
+            } else if (phoneInput.value.length < 10) {
+                setError(phoneInput, 'Телефон не найден.');
+            } else {
+                setSucces(phoneInput, '');
+            }
+    
+        }
+
         const checkInputs = () => {
 
             if (nameInput.value === '') {
@@ -68,25 +89,25 @@ export function validateForm() {
                 setSucces(nameInput, '');
             }
 
-            if (countInput.value === '') {
+            if ((countInput)&&(countInput.value === '')) {
                 setError(countInput, 'Обязательное поле.');
-            } else if (!isCount(countInput)) {
+            } else if (!isCount(countInput)&&(countInput)) {
                 setError(countInput, 'Некорректный формат.');
             } else {
                 setSucces(countInput, '');
             }
 
-            if (timeInput.value === '') {
+            if ((timeInput)&&(timeInput.value === '')) {
                 setError(timeInput, 'Обязательное поле.');
-            } else if (!isTime(timeInput)) {
+            } else if (!isTime(timeInput)&&(timeInput)) {
                 setError(timeInput, 'Некорректная время.');
             } else {
                 setSucces(timeInput, '');
             }
     
-            if (dateInput.value === '') {
+            if ((dateInput)&&(dateInput.value === '')) {
                 setError(dateInput, 'Обязательное поле.');
-            } else if (!isDate(dateInput)) {
+            } else if (!isDate(dateInput)&&(dateInput)) {
                 setError(dateInput, 'Некорректная дата.');
             } else {
                 setSucces(dateInput, '');
@@ -107,7 +128,9 @@ export function validateForm() {
         form.addEventListener('submit', (e) => {
             e.preventDefault()
             validation = true;
-            checkInputs()
+            form.classList.contains('form-extended')
+                ? checkInputs()
+                : checkInputsShort()
             
             if (validation) {
                 // валидация успешна, данные пойдут на сервер
@@ -115,8 +138,10 @@ export function validateForm() {
                 let modalWindow = document.querySelector('.modal-window');
                 if (modalWindow.classList.contains('active')) {
                     let orderWindow = modalWindow.querySelector('.modal-window__content-order');
+                    let orderShortWindow = modalWindow.querySelector('.modal-window__content-short-order');
                     let successWindow = modalWindow.querySelector('.modal-window__content-success');
                     orderWindow.classList.remove('active');
+                    orderShortWindow.classList.remove('active');
                     successWindow.classList.add('active');
                 }
             }

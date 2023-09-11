@@ -1,0 +1,33 @@
+<form id="@@id"class="form form-short" method="post">
+    <div class="form__grid mb-3">
+        @@include('../../UI/files/input-placeholder.html', {
+            'class-input-row': '',
+            'class-input-value': 'form__input-value input__valid-name',
+            'value': '',
+            'placeholder': 'Ваше имя',
+            'name': 'name',
+            'type': 'text',
+            'required': 'true'
+        })
+        @@include('../../UI/files/input-placeholder.html', {
+            'class-input-row': '',
+            'class-input-value': 'form__input-value input__valid-phone',
+            'value': '',
+            'placeholder': 'Телефон',
+            'name': 'phone',
+            'type': 'text',
+            'required': 'true'
+        })
+        
+    </div>
+    <div class="form__btn-action-wrapper mb-3">
+        @@include('../../UI/files/button.html', {
+            'class-btn': 'btn-primary form__btn bg-primary text-05-color form__btn-action',
+            'text': 'Рассчитать стоимость',
+            'type-btn': 'submit'
+        })
+    </div>
+    <span class="text-small text-02-color form__accept">
+        Отправляя заявку, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
+    </span>
+</form>

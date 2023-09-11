@@ -30,6 +30,55 @@
         }
     }
 
+    &-secondary {
+        background-color: $bg03;
+        padding: 16px 24px;
+        border-radius: 54px;
+        color: $text01;
+
+        svg path {
+            fill: $text01;
+        }
+
+        @media screen and (min-width: 576px) {
+            font-size: 16px;
+            padding: 18px 32px;
+        }
+
+        &:hover, 
+        &:focus {
+            svg path {
+                fill: $primaryHover;
+            }
+
+            color: $primaryHover;
+        }
+
+        &:active {
+            svg path {
+                fill: $primaryActive;
+            }
+
+            color: $primaryActive;
+        }
+    }
+
+    &__link {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        color: $primary;
+
+        &:hover, 
+        &:focus {
+            color: $primaryHover;
+        }
+
+        &:active {
+            color: $primaryActive;
+        }
+    }
+
     &__menu {
         display: flex;
         align-items: center;

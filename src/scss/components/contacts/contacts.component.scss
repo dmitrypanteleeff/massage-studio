@@ -1,0 +1,28 @@
+@import '../../common/files/variables.scss';
+
+.contacts {
+
+    &__links {
+        &-wrapper {
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 8px;
+
+            @media screen and (min-width: 768px) {
+                gap: 16px;
+            }
+        }
+
+        &-item {
+            padding: 16px;
+            width: 100%;
+            flex-shrink: 0;
+
+            @media screen and (min-width: 768px) {
+                padding: 20px 32px;
+                width: auto;
+            }
+        }
+    }
+    
+}

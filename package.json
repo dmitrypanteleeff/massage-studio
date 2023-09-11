@@ -43,8 +43,10 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.22",
     "gulp-htmlmin": "^5.0.1",
     "gulp-version-number": "^0.2.4",
+    "swiper": "^10.2.0",
     "vanilla-lazyload": "^17.8.4"
   }
 }

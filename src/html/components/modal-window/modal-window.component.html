@@ -1,5 +1,5 @@
 <div class="modal-window">
-    <div class="modal-window__content modal-window__content-order active">
+    <div class="modal-window__content modal-window__content-order">
         <div class="modal-window__title-wrapper">
             <h6 class="text-01-color modal-window__title mb-3 mb-sm-5">
                 Заказать массаж в&nbsp;офис или на&nbsp;мероприятие
@@ -15,6 +15,24 @@
         </div>
 
         @@include('../../UI/files/form-extended.html', {})
+
+    </div>
+    <div class="modal-window__content modal-window__content-short-order">
+        <div class="modal-window__title-wrapper">
+            <h6 class="text-01-color modal-window__title mb-3 mb-sm-5">
+                Заказать массаж в&nbsp;офис или на&nbsp;мероприятие
+            </h6>
+
+            <div class="modal-window__btn-close-wrapper">
+                @@include('../../UI/files/button.html', {
+                    'class-btn': 'modal-window__btn modal-window__btn-close',
+                    'text': '',
+                    'type-btn': 'button'
+                })
+            </div>
+        </div>
+
+        @@include('../form-short/form-short.component.html', {})
 
     </div>
 

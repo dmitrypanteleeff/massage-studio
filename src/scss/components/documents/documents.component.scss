@@ -1,0 +1,25 @@
+@import '../../common/files/variables.scss';
+
+.documents {
+
+    &__grid {
+        &-item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            text-decoration: none;
+
+            &-circle {
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }  
+    }
+
+    &__swiper {
+        width: 100%;
+    }
+
+}
