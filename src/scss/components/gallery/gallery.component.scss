@@ -1,0 +1,88 @@
+@import '../../common/files/variables.scss';
+
+.gallery {
+    
+    &__items {
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-shrink: 0;
+        gap: 24px;
+        min-width: 100%;
+
+        &.marquee {
+            animation: scroll 35s linear infinite;
+        }
+
+        &.reverce {
+            animation-direction: reverse;
+        }
+    }
+
+    &__item {
+        flex: 0 0 auto;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s ease-in-out;
+        border-radius: 32px;
+        overflow: hidden;
+        transform: scale(1);
+
+        &:nth-child(4n+1) {
+            width: 290px;
+            height: 410px;
+        }
+
+        &:nth-child(4n+2) {
+            width: 270px;
+            height: 285px;
+        }
+
+        &:nth-child(4n+3) {
+            width: 227px;
+            height: 185px;
+        }
+
+        &:nth-child(4n+4) {
+            width: 235px;
+            height: 305px;
+        }
+
+        &-img {
+            // position: absolute;
+            // left: 0;
+            // top: 0;
+            width: 100%;
+            max-width: none;
+            height: 100%;
+            border: 0;
+            object-fit: cover;
+        }
+    }
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.gallery-text {
+    font-size: 128px;
+    font-weight: 500;
+}

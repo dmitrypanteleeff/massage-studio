@@ -1,21 +1,10 @@
 import LazyLoad from 'vanilla-lazyload';
-//import Swiper from 'swiper/bundle';
 import Swiper from 'swiper';
-
 import { Navigation, Pagination } from 'swiper/modules';
 import { Fancybox } from "@fancyapps/ui";
-//import "@fancyapps/ui/dist/fancybox/fancybox.css";
-//import 'swiper/swiper-bundle.min.css';
-//import 'swiper/swiper.min.css'
-//import 'swiper/modules/pagination.min.css'
-//import 'swiper/css';
-//import 'swiper/swiper.scss';
-// import 'swiper/swiper-bundle.min.css';
-// import 'swiper/swiper.min.css';
-//import 'swiper/swiper-bundle.css';
 import { isBrowserSupportWebp } from './modules/support-webp.js';
 import { handleAttachFiles } from './modules/step-attaching-images-page.js';
-import { Select } from './modules/step-client-page.js';
+
 import { handleInputCodeSms, countDown } from './modules/window-agreement-page.js';
 import { toggleModalWindow } from './modules/toggle-modal-window.js';
 import { animCircleText } from './modules/animate-circle.js';
@@ -23,6 +12,7 @@ import { validInputs } from './modules/valid-inputs.js';
 import { formHandle } from './modules/form-handle.js';
 import { validateForm } from './modules/validate.js'
 import { handleMobileMenu } from './modules/mobile-menu.js';
+import { accordeonFunc } from './modules/accordeon.js';
 
 
 const swiper1 = new Swiper(".type-massage__swiper", {
@@ -68,10 +58,6 @@ const swiper2 = new Swiper(".team__swiper", {
             slidesPerView: 1.5,
             spaceBetween: 16
         },
-        // 768: {
-        //     slidesPerView: 2.06,
-        //     spaceBetween: 16
-        // },
         992: {
             slidesPerView: 2.5,
             spaceBetween: 16
@@ -118,12 +104,16 @@ const swiper3 = new Swiper(".blog__swiper", {
 });
 
 Fancybox.bind('[data-fancybox="gallery"]', {
-    // Your custom options
-  });
+    Thumbs : {
+        showOnStart: false
+    }
+});
 
-  Fancybox.bind('[data-fancybox="gallery-b"]', {
-    // Custom options for the second gallery
-  });
+Fancybox.bind('[data-fancybox="gallery-files"]', {
+    Thumbs : {
+        showOnStart: false
+    }
+});
 
 
 
@@ -138,26 +128,7 @@ validInputs();
 formHandle();
 validateForm();
 handleMobileMenu();
+accordeonFunc();
 
 let myLazyLoad = new LazyLoad();
 myLazyLoad.update();
-
-const dataInSelect = [
-    {
-        id: 0,
-        value: 'Мужской'
-    },
-    {
-        id: 1,
-        value: 'Женский'
-    }
-]
-
-const select = new Select('#select', {
-    title: 'Пол',
-    placeholder: 'Выберите пол',
-    data: dataInSelect,
-});
-
-
-

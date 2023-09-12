@@ -10,7 +10,6 @@ export function validateForm() {
         const nameInput = form.querySelector('.input__valid-name');
         const phoneInput = form.querySelector('.input__valid-phone');
         const countInput = form.querySelector('.input__valid-positive-number');
-        console.log(333333333, countInput)
         const timeInput = form.querySelector('.input__valid-time');
         const dateInput = form.querySelector('.input__valid-date');
 

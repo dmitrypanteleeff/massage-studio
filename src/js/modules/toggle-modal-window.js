@@ -16,7 +16,6 @@ export const toggleModalWindow = () => {
     const openModalWindow = (modal, classModal) => {
         htmlWindow.classList.add('active');
         modal.classList.add('active');
-        console.log(22222, classModal)
         const modalWindowContent = modal.querySelector(classModal);
         modalWindowContent.classList.add('active');
     }
@@ -26,11 +25,8 @@ export const toggleModalWindow = () => {
         let orderWindow = modal.querySelector('.modal-window__content-order');
         let orderShortWindow = modal.querySelector('.modal-window__content-short-order');
         modal.classList.remove('active');
-        console.log(44444444, classModal) 
-        //let orderWindow = modal.querySelector(classModal);
         let successWindow = modal.querySelector('.modal-window__content-success');
         timeoutEvent = setTimeout(() => {
-            //orderWindow.classList.remove('active');
             successWindow.classList.remove('active');
             orderWindow.classList.remove('active');
             orderShortWindow.classList.remove('active');
@@ -38,7 +34,6 @@ export const toggleModalWindow = () => {
     }
 
     const toggleModal = (btn) => {
-        console.log(111111111, btn)
         let classModal = btn.classList.contains('modal-window__btn-short-open')
             ? '.modal-window__content-short-order'
             : '.modal-window__content-order'
@@ -63,8 +58,6 @@ export const toggleModalWindow = () => {
     if (btnSuccessOrderCloseModal) {
         btnSuccessOrderCloseModal.forEach(item => item.addEventListener('click', () => {
             closeModalWindow(modal);
-            
-            
         }));
     }
 }

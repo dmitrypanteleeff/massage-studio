@@ -1,0 +1,104 @@
+@import '../../common/files/variables.scss';
+
+.faq {
+    
+    &__content {
+        border-radius: 32px;
+        overflow: hidden;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        background-color: $bg03;
+        padding: 0 16px;
+
+        @media screen and (min-width: 576px) {
+            padding: 0 24px;
+        }
+        
+
+        &-top {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            cursor: pointer;
+            @media screen and (min-width: 576px) {
+                padding-top: 24px;
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $bg02;
+        }
+
+        &.active {
+           
+            .faq__item-bottom {
+                max-height: 250px;
+                transition: max-height 500ms ease 0ms;
+
+                @media screen and (min-width: 576px) {
+                    max-height: 150px;
+                }
+            }
+        }
+
+        &-bottom {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 500ms ease 0ms;
+
+            &-content {
+                margin-bottom: 16px;
+            }
+        }
+
+        
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 100px;
+        background-color: $bg01;
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        transform: rotate(45deg);
+        z-index: 1;
+        transition: all 500ms ease 0ms;
+
+        svg path {
+            fill: $text01;
+        }
+
+        &:hover, 
+        &:focus {
+            svg path {
+                fill: $primaryHover;
+            }
+
+            color: $primaryHover;
+        }
+
+        &:active {
+            svg path {
+                fill: $primaryActive;
+            }
+
+            color: $primaryActive;
+        }
+        
+
+        &.active {
+            transform: rotate(180deg);
+            transition: all 500ms ease 0ms;
+        }
+    }
+}
