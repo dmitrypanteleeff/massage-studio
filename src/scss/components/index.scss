@@ -1,6 +1,8 @@
 @import './header/header.component.scss';
+@import './breadcrums/breadcrums.component.scss';
 @import './hero-banner/hero-banner.component.scss';
 @import './clients/clients.component.scss';
+@import './form/form.component.scss';
 @import './about/about-banner.component.scss';
 @import './main-hero-banner/main-hero-banner.component.scss';
 @import './window-agreement/window-agreement.component.scss';
@@ -21,3 +23,7 @@
 @import './gallery/gallery.component.scss';
 @import './faq/faq.component.scss';
 @import './footer/footer.component.scss';
+
+@import './blog-hero-banner/blog-hero-banner.component.scss';
+@import './blog-handled/blog-handled.component.scss';
+@import './blog-form/blog-form.component.scss';

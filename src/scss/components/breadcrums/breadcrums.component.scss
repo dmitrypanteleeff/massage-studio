@@ -1,0 +1,13 @@
+@import '../../common/files/variables.scss';
+
+.breadcrums {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $text01;
+    }
+}

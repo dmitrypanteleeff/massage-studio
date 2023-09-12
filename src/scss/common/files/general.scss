@@ -165,6 +165,10 @@ footer {
     display: block!important;
 }
 
+.d-none {
+    display: none!important;
+}
+
 .rounded-1 {
     border-radius: 8px;
 }
@@ -256,7 +260,20 @@ footer {
             grid-template-rows: 1fr;
             gap: 24px;
         }
+    }
 
+    &.banner-wrapper__three {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 16px;
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (min-width: 1200px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 
     &.banner-wrapper__four {

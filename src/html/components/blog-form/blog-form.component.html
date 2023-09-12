@@ -1,0 +1,31 @@
+<div class="blog-form page-section mt-6 mb-6">
+    <div class="container">
+        <div class="grid-wrap banner-wrapper__two">
+            <div class="rounded-5 bg-03 p-3 p-sm-4 blog-form__card">
+                <div class="mb-3">
+                    <h2 class="h2 mb-3">
+                        Заказать массаж в&nbsp;офис или на&nbsp;мероприятие
+                    </h2>
+                    <p class="paragraph">
+                        Рекомендуем протестировать 1&nbsp;раз&nbsp;&mdash; и&nbsp;если понравится, подпишем договор
+                    </p>
+                </div>
+                
+                <div class="blog-form__card-content">
+                    @@include('../circle-discont/circle-discont.component.html', {
+                        'class-circle': '',
+                        'text-center': '15%',
+                        'text-circle': 'Скидка на первый заказ·Скидка на первый заказ·'
+                    })
+
+                    <img class="lazy blog-form__img" loading="lazy" alt="Гарантируем качество" data-src="@img/megaphone-marketing-icon.svg"/>
+                </div>
+            </div>
+            <div class="rounded-5 bg-03 p-3 p-sm-4 blog-form__card-form">
+                @@include('../form-extended/form-extended.component.html', {
+                    'id': 'form-extended-2'
+                })
+            </div>
+        </div>
+    </div>
+</div>

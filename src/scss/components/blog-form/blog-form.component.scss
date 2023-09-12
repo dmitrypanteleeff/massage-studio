@@ -1,0 +1,25 @@
+@import '../../common/files/variables.scss';
+
+.blog-form {
+    
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-content {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+
+    &__img {
+        width: 128px;
+
+        @media screen and (min-width: 576px) {
+            width: 180px;
+        }
+    }
+}

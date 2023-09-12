@@ -3,9 +3,7 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Fancybox } from "@fancyapps/ui";
 import { isBrowserSupportWebp } from './modules/support-webp.js';
-import { handleAttachFiles } from './modules/step-attaching-images-page.js';
 
-import { handleInputCodeSms, countDown } from './modules/window-agreement-page.js';
 import { toggleModalWindow } from './modules/toggle-modal-window.js';
 import { animCircleText } from './modules/animate-circle.js';
 import { validInputs } from './modules/valid-inputs.js';
@@ -13,6 +11,7 @@ import { formHandle } from './modules/form-handle.js';
 import { validateForm } from './modules/validate.js'
 import { handleMobileMenu } from './modules/mobile-menu.js';
 import { accordeonFunc } from './modules/accordeon.js';
+import { blogHandledFunc } from './modules/blog-handled.js'
 
 
 const swiper1 = new Swiper(".type-massage__swiper", {
@@ -118,9 +117,8 @@ Fancybox.bind('[data-fancybox="gallery-files"]', {
 
 
 isBrowserSupportWebp();
-handleAttachFiles();
-handleInputCodeSms();
-countDown();
+//handleAttachFiles();
+
 toggleModalWindow();
 
 animCircleText();
@@ -129,6 +127,7 @@ formHandle();
 validateForm();
 handleMobileMenu();
 accordeonFunc();
+blogHandledFunc();
 
 let myLazyLoad = new LazyLoad();
 myLazyLoad.update();

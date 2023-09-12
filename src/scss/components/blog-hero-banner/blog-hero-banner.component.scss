@@ -1,0 +1,66 @@
+@import '../../common/files/variables.scss';
+
+.blog-hero-banner {
+    &__h1 {
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 16px 0 32px;
+        
+
+        @media screen and (min-width: 576px) {
+            padding: 32px 0 64px;
+        }
+    }
+
+    &__slide {
+        border-radius: 32px;
+        height: 324px;
+        // width: 500px;
+        overflow: hidden;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+
+        @media screen and (min-width: 576px) {
+            height: 420px;
+        }
+        
+        &-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            max-width: none;
+            height: 100%;
+            border: 0;
+            object-fit: cover;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            min-height: 78px;
+            position: relative;
+            z-index: 1;
+            border-radius: 24px;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, .75);
+            backdrop-filter: blur(10px);
+
+            @media screen and (min-width: 576px) {
+                min-height: 100px;
+            }
+        }
+    }
+
+}
+

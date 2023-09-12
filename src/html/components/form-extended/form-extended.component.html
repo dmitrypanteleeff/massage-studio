@@ -1,0 +1,75 @@
+<form id="@@id" class="form form-extended" method="post">
+    <div class="form__grid mb-3">
+        @@include('../../UI/files/input-placeholder.html', {
+            'class-input-row': '',
+            'class-input-value': 'form__input-value input__valid-name',
+            'value': '',
+            'placeholder': 'Ваше имя',
+            'name': 'name',
+            'type': 'text',
+            'required': 'true'
+        })
+        @@include('../../UI/files/input-placeholder.html', {
+            'class-input-row': '',
+            'class-input-value': 'form__input-value input__valid-phone',
+            'value': '',
+            'placeholder': 'Телефон',
+            'name': 'phone',
+            'type': 'text',
+            'required': 'true'
+        })
+        <div class="form__input-wrapper form__input-count-wrapper">
+            <button type="button" class="form__btn-count form__btn-count-plus p-0">
+                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.94 5.46979L4 2.41645L7.06 5.46979L8 4.52979L4 0.529785L0 4.52979L0.94 5.46979Z" fill="black"/>
+                </svg> 
+            </button>
+            @@include('../../UI/files/input-placeholder.html', {
+                'class-input-row': '',
+                'class-input-value': 'form__input-value input__valid-positive-number',
+                'value': '',
+                'placeholder': 'Количество специалистов',
+                'name': 'specialist',
+                'type': 'text',
+                'required': 'true'
+            })
+            <button type="button" class="form__btn-count form__btn-count-minus p-0">
+                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.06 0.530215L4 3.58355L0.94 0.530214L3.49691e-07 1.47021L4 5.47021L8 1.47021L7.06 0.530215Z" fill="black"/>
+                </svg>  
+            </button>
+        </div>
+        <div class="form__input-wrapper form__input-wrapper-grid">
+            @@include('../../UI/files/input-placeholder.html', {
+                'class-input-row': '',
+                'class-input-value': 'form__input-value input__valid-time',
+                'value': '',
+                'placeholder': 'Время сеанса',
+                'name': 'specialist',
+                'type': 'text',
+                'required': 'true'
+            })
+
+            @@include('../../UI/files/input-placeholder.html', {
+                'class-input-row': '',
+                'class-input-value': 'form__input-value input__valid-date',
+                'value': '',
+                'placeholder': 'Дата (ДД.ММ.ГГГГ)',
+                'name': 'date',
+                'type': 'text',
+                'required': 'true'
+            })
+        </div>
+        
+    </div>
+    <div class="form__btn-action-wrapper mb-3">
+        @@include('../../UI/files/button.html', {
+            'class-btn': 'btn-primary form__btn bg-primary text-05-color form__btn-action',
+            'text': 'Рассчитать стоимость',
+            'type-btn': 'submit'
+        })
+    </div>
+    <span class="text-small text-02-color form__accept">
+        Отправляя заявку, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
+    </span>
+</form>

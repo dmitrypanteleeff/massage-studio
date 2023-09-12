@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/components/head/head.component.html', {
+        'title':'Корпоративный массаж с заботой о здоровье ваших сотрудников',
+    })
+    <body>
+        @@include('html/components/header/header.component.html', {})
+        <main class="mt-6 mt-lg-0">
+            @@include('html/components/breadcrums/breadcrums.component.html', {
+                'text-link-1': 'Блог',
+                'text-link-2': '',
+                'class-slash-2': 'd-none',
+                'class-link-1': '',
+                'class-link-2': 'd-none',
+                'href-link-1': '\/blog-page.html'
+            })
+            @@include('html/components/blog-hero-banner/blog-hero-banner.component.html', {})
+            
+            @@include('html/components/blog-handled/blog-handled.component.html', {})
+            
+
+            @@include('html/components/blog-form/blog-form.component.html', {})
+        </main>
+        @@include('html/components/footer/footer.component.html', {})
+        @@include('html/components/modal-window/modal-window.component.html')
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

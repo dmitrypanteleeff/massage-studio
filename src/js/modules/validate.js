@@ -2,7 +2,32 @@ export function validateForm() {
 
     let forms = document.querySelectorAll('.form');
     
+    const showFormSuccess = (modalWindow) => {
+        let orderWindow = modalWindow.querySelector('.modal-window__content-order');
+        let orderShortWindow = modalWindow.querySelector('.modal-window__content-short-order');
+        let successWindow = modalWindow.querySelector('.modal-window__content-success');
+        orderWindow.classList.remove('active');
+        orderShortWindow.classList.remove('active');
+        modalWindow.classList.add('active');
+        successWindow.classList.add('active');
+    }
 
+    const showSuccessMessage = () => {
+
+        let modalWindow = document.querySelector('.modal-window');
+
+        if (modalWindow.classList.contains('active')) {
+            showFormSuccess(modalWindow);
+            return;
+        }
+
+        let blogForm = document.querySelector('.blog-form__card-form');
+
+        if (blogForm && modalWindow) {
+            showFormSuccess(modalWindow);
+            return;
+        }
+    }
     
 
     forms.forEach(form => {
@@ -132,20 +157,14 @@ export function validateForm() {
                 : checkInputsShort()
             
             if (validation) {
-                // валидация успешна, данные пойдут на сервер
-                console.log('Валидация прошла')
-                let modalWindow = document.querySelector('.modal-window');
-                if (modalWindow.classList.contains('active')) {
-                    let orderWindow = modalWindow.querySelector('.modal-window__content-order');
-                    let orderShortWindow = modalWindow.querySelector('.modal-window__content-short-order');
-                    let successWindow = modalWindow.querySelector('.modal-window__content-success');
-                    orderWindow.classList.remove('active');
-                    orderShortWindow.classList.remove('active');
-                    successWindow.classList.add('active');
-                }
+                console.log('Валидация прошла');
+                // валидация пройдена, надо отправить форму и показать сообщение об успешной отправке
+
+                showSuccessMessage();
+
             }
             else {
-                console.log('Валидация не прошла')
+                console.log('Валидация не прошла');
                 // валидация не пройдена, надо вывести ошибки и не отправлять форму
             }
         })
