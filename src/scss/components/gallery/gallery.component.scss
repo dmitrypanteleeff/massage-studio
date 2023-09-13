@@ -9,6 +9,7 @@
         flex-shrink: 0;
         gap: 24px;
         min-width: 100%;
+        overflow: hidden;
 
         &.marquee {
             animation: scroll 35s linear infinite;
