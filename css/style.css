@@ -5645,6 +5645,7 @@ footer {
       flex-shrink: 0;
   gap: 24px;
   min-width: 100%;
+  overflow: hidden;
 }
 
 .gallery__items.marquee {
